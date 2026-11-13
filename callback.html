@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sign-in complete · Pug Morning Brief</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>TikTok sign-in</h1>
+<div id="ok" hidden>
+  <p>Sign-in complete. Copy this code back to the setup helper on your computer.
+  It works once and expires in a few minutes.</p>
+  <pre id="code"></pre>
+  <button id="copy">Copy code</button>
+</div>
+<div id="err" hidden><p>Sign-in did not complete: <span id="msg"></span></p></div>
+<div id="none"><p>This page receives the code after signing in with TikTok. Nothing to show here.</p></div>
+<p class="small">This page runs only in your browser. It does not send the code anywhere.</p>
+</main>
+<script>
+const q = new URLSearchParams(location.search);
+const show = id => { document.getElementById("none").hidden = true; document.getElementById(id).hidden = false; };
+if (q.get("code")) {
+  show("ok");
+  document.getElementById("code").textContent = q.get("code");
+  document.getElementById("copy").onclick = () => navigator.clipboard.writeText(q.get("code"));
+} else if (q.get("error")) {
+  show("err");
+  document.getElementById("msg").textContent = q.get("error") + (q.get("error_description") ? ": " + q.get("error_description") : "");
+}
+</script></body></html>
