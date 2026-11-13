@@ -1,13 +1,109 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pug Morning Brief</title><link rel="stylesheet" href="style.css"></head>
-<body><main>
-<img src="icon.png" alt="Pug Morning Brief icon" width="160" height="160">
-<h1>Pug Morning Brief</h1>
-<p>A personal tool that turns a daily English market summary into a 30-second Thai
-market-news video, presented by our pug reporter. After the owner reviews and approves
-each video, the tool posts it to the owner's own TikTok account.</p>
-<p>It is used only by its owner. It does not offer accounts or services to the public.</p>
-<nav><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></nav>
-<p class="small">Contact: <a href="https://github.com/wara-msri-sudo">github.com/wara-msri-sudo</a></p>
-</main></body></html>
+<title>Pug Morning Brief</title>
+<meta name="description" content="A personal tool that turns a daily English market summary into a 30-second Thai market-news video, presented by a pug reporter.">
+<meta property="og:title" content="Pug Morning Brief">
+<meta property="og:description" content="30-second Thai market news, every weekday morning, from our pug reporter.">
+<meta property="og:image" content="app_icon_1024.png">
+<meta name="theme-color" content="#0b1530">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css"></head>
+<body class="home">
+
+<header class="topbar">
+  <a class="brand" href="index.html"><img src="icon.png" alt="" width="36" height="36">Pug Morning Brief</a>
+  <nav>
+    <a href="#inside">Inside a video</a>
+    <a href="#how">How it works</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="dot"></span>สรุปตลาดเช้านี้ · every weekday</p>
+    <h1>Market news in <em>30&nbsp;seconds</em>, read by a pug.</h1>
+    <p class="lede">A personal tool that turns a daily English market summary into a 30-second
+    Thai market-news video, presented by our pug reporter. After the owner reviews and approves
+    each video, the tool posts it to the owner's own TikTok account.</p>
+    <ul class="chips">
+      <li>⏱ 30 s vertical</li>
+      <li>🇹🇭 Thai voice-over</li>
+      <li>📊 Numbers checked</li>
+      <li>✅ Owner-approved</li>
+    </ul>
+    <p class="note">Used only by its owner. It does not offer accounts or services to the public.</p>
+  </div>
+
+  <div class="phone" aria-label="Preview frames from a Pug Morning Brief video">
+    <div class="screen">
+      <img src="img/frame_1_hook.jpg" alt="Hook: title bar สรุปตลาดเช้านี้ and the day's headline" width="540" height="960">
+      <img src="img/frame_2_board.jpg" alt="Markets: scoreboard of S&amp;P 500, Nasdaq, gold, oil, Bitcoin and bonds" width="540" height="960" loading="lazy">
+      <img src="img/frame_3_focus.jpg" alt="Focus: big-number card for gold" width="540" height="960" loading="lazy">
+      <img src="img/frame_4_watch.jpg" alt="Outro: this week's watch list and the disclaimer" width="540" height="960" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="inside" class="band">
+  <div class="wrap">
+    <h2>Inside every video</h2>
+    <p class="sub">Four beats, one pug, exactly 30 seconds. The cards show more than the voice can say.</p>
+    <ol class="beats">
+      <li>
+        <img src="img/frame_1_hook.jpg" alt="" width="540" height="960" loading="lazy">
+        <span class="time">0–3 s</span>
+        <h3>Hook</h3>
+        <p>A greeting and the single biggest story of the day, as one punchy headline.</p>
+      </li>
+      <li>
+        <img src="img/frame_2_board.jpg" alt="" width="540" height="960" loading="lazy">
+        <span class="time">3–12 s</span>
+        <h3>Markets <span class="th">ตลาดเมื่อคืน</span></h3>
+        <p>A scoreboard of 4–6 markets with overnight moves: <b class="up">▲ up</b>, <b class="down">▼ down</b>, <b class="flat">● flat</b>.</p>
+      </li>
+      <li>
+        <img src="img/frame_3_focus.jpg" alt="" width="540" height="960" loading="lazy">
+        <span class="time">12–20 s</span>
+        <h3>Focus <span class="th">โฟกัสวันนี้</span></h3>
+        <p>One asset or sector to watch today, with the reason and context such as analysts' targets.</p>
+      </li>
+      <li>
+        <img src="img/frame_4_watch.jpg" alt="" width="540" height="960" loading="lazy">
+        <span class="time">20–30 s</span>
+        <h3>Watch list <span class="th">จับตา</span></h3>
+        <p>What's coming this week: data releases, central-bank meetings, a big company story.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="how" class="wrap">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><span class="n">1</span><div><h3>Morning brief</h3><p>An English market summary is prepared each weekday morning.</p></div></li>
+    <li><span class="n">2</span><div><h3>Thai script</h3><p>It is rewritten as a short, casual Thai script. Every number shown on screen is checked against the original brief.</p></div></li>
+    <li><span class="n">3</span><div><h3>Voice &amp; render</h3><p>A Thai voice-over, karaoke captions, market cards and background music are rendered into a 1080×1920 video.</p></div></li>
+    <li><span class="n">4</span><div><h3>Owner review</h3><p>The owner watches the video. Only after they approve it is it posted to the owner's own TikTok account.</p></div></li>
+  </ol>
+</section>
+
+<section class="wrap">
+  <div class="facts">
+    <div><h3>Not financial advice</h3><p>Videos summarise publicly reported market news for general information. Each one says so on screen and out loud.</p></div>
+    <div><h3>No invented numbers</h3><p>Figures come only from the source brief. They are never rounded to new values or “updated”.</p></div>
+    <div><h3>Your data stays put</h3><p>TikTok sign-in tokens are stored only on the owner's computer. Nothing is collected from viewers. <a href="privacy.html">Privacy Policy</a></p></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="disclaimer">⚠️ ไม่ใช่คำแนะนำการลงทุน · Not investment advice</p>
+  <nav><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://github.com/wara-msri-sudo">Contact</a></nav>
+  <p class="small">© 2026 Pug Morning Brief · a personal project</p>
+</footer>
+
+</body></html>
